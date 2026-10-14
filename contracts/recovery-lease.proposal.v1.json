@@ -1,0 +1,29 @@
+{
+  "status": "qualification proposal only; no production host capability claimed",
+  "contract": "native-recovery-lease",
+  "version": 1,
+  "purpose": "Permit a verified add-on recovery entry to run briefly after the complete companion Job Object terminates, without allowing that companion to escape its containment.",
+  "request": {
+    "operation": "acquire",
+    "artifactDigest": "sha256:<verified immutable artifact digest>",
+    "entry": "companion.exe",
+    "owner": {"pid": "u32", "createdFileTime": "u64"},
+    "opaqueStatePath": "canonical add-on-owned local file",
+    "afterOwnerExitBudgetMs": 2000
+  },
+  "response": {"leaseId": "opaque host identity", "state": "ready or rejected", "reason": "observable rejection reason"},
+  "requirements": [
+    "The host owns and launches the recovery process outside the exact companion Job Object; the companion receives no breakaway permission.",
+    "The host verifies the executable entry against the immutable artifact and binds the owner's PID plus creation time.",
+    "Readiness is acknowledged before reversible state changes become eligible for crash recovery.",
+    "The recovery entry interprets opaque state; window identities, expected styles and placement semantics remain add-on-owned.",
+    "A fixed budget bounds post-exit execution; completion, rejection and failed recovery are observable.",
+    "This proposal does not imply launch ratification or modifications to DEC-0157."
+  ],
+  "localEvidence": [
+    "src/recovery.cpp: StartGuardian readiness and PID+creation-time binding",
+    "src/runtime.cpp: context detection and safe tray fallback",
+    "tests/windows.test.mjs: parent termination versus complete Job Object termination",
+    "tests/windows.test.mjs: subsequent activation replays add-on-owned stale recovery journals"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "calm",
+  "name": "Bureau calme",
+  "settings": {
+    "layout": "duo",
+    "columns": 3,
+    "gridColumns": 3,
+    "gridRows": 2,
+    "mainShare": 64,
+    "splitShare": 50,
+    "outerGap": 12,
+    "innerGap": 12,
+    "opacity": 38,
+    "activeOpacity": 78,
+    "cornerRadius": 20,
+    "borderWidth": 2,
+    "shadowDepth": 14,
+    "zoneLabels": true,
+    "motion": "smooth",
+    "duration": 180,
+    "profile": "custom",
+    "surfaceMode": "gradient",
+    "startColor": "#0B655FFF",
+    "endColor": "#254AD4FF",
+    "activeColor": "#64F3CCFF",
+    "textColor": "#FFFFFFFF",
+    "gradientDirection": "diagonal"
+  }
+}

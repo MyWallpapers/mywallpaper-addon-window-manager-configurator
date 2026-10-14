@@ -1,0 +1,1291 @@
+{
+  "runtime": "native-v1",
+  "name": "Placement des fenêtres",
+  "description": "Placez vos fenêtres, créez vos zones et retrouvez vos applications dans une organisation qui vous ressemble.",
+  "version": "0.1.0",
+  "deviceSettingsVersion": "1",
+  "settings": [
+    {
+      "id": "enabled",
+      "type": "boolean",
+      "label": "Organiser mes fenêtres",
+      "default": true,
+      "scope": "device",
+      "description": "Active les déplacements et les raccourcis de cet add-on."
+    },
+    {
+      "id": "layoutSection",
+      "type": "section",
+      "label": "Ma disposition",
+      "defaultCollapsed": false
+    },
+    {
+      "id": "layout",
+      "type": "select",
+      "label": "Organisation",
+      "default": "duo",
+      "scope": "device",
+      "options": [
+        {
+          "value": "duo",
+          "label": "Deux fenêtres côte à côte"
+        },
+        {
+          "value": "quad",
+          "label": "Quatre fenêtres"
+        },
+        {
+          "value": "columns",
+          "label": "Colonnes égales"
+        },
+        {
+          "value": "focus",
+          "label": "Une grande fenêtre et deux outils"
+        },
+        {
+          "value": "grid",
+          "label": "Grille personnalisée"
+        }
+      ],
+      "parent": "layoutSection"
+    },
+    {
+      "id": "columns",
+      "type": "range",
+      "label": "Nombre de colonnes",
+      "default": 3,
+      "scope": "device",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "parent": "layoutSection",
+      "showIf": {
+        "setting": "layout",
+        "equals": "columns"
+      }
+    },
+    {
+      "id": "gridColumns",
+      "type": "range",
+      "label": "Colonnes de la grille",
+      "default": 3,
+      "scope": "device",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "parent": "layoutSection",
+      "showIf": {
+        "setting": "layout",
+        "equals": "grid"
+      }
+    },
+    {
+      "id": "gridRows",
+      "type": "range",
+      "label": "Lignes de la grille",
+      "default": 2,
+      "scope": "device",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "parent": "layoutSection",
+      "showIf": {
+        "setting": "layout",
+        "equals": "grid"
+      }
+    },
+    {
+      "id": "mainShare",
+      "type": "range",
+      "label": "Largeur de la grande fenêtre (%)",
+      "default": 64,
+      "scope": "device",
+      "min": 35,
+      "max": 80,
+      "step": 1,
+      "parent": "layoutSection",
+      "showIf": {
+        "setting": "layout",
+        "equals": "focus"
+      }
+    },
+    {
+      "id": "splitShare",
+      "type": "range",
+      "label": "Largeur de la fenêtre gauche (%)",
+      "default": 50,
+      "scope": "device",
+      "min": 25,
+      "max": 75,
+      "step": 1,
+      "parent": "layoutSection",
+      "showIf": {
+        "setting": "layout",
+        "equals": "duo"
+      }
+    },
+    {
+      "id": "outerGap",
+      "type": "range",
+      "label": "Marge au bord de l’écran (px)",
+      "default": 12,
+      "scope": "device",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "parent": "layoutSection",
+      "description": "Les pixels sont adaptés au zoom de l’écran. La barre des tâches reste réservée."
+    },
+    {
+      "id": "innerGap",
+      "type": "range",
+      "label": "Espace entre les fenêtres (px)",
+      "default": 12,
+      "scope": "device",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "parent": "layoutSection"
+    },
+    {
+      "id": "targetMonitor",
+      "type": "select",
+      "label": "Écran de placement",
+      "default": "window",
+      "scope": "device",
+      "options": [
+        {
+          "value": "window",
+          "label": "Celui de la fenêtre"
+        },
+        {
+          "value": "cursor",
+          "label": "Celui du pointeur"
+        },
+        {
+          "value": "primary",
+          "label": "Écran principal"
+        }
+      ],
+      "parent": "layoutSection"
+    },
+    {
+      "id": "desktopLayouts",
+      "type": "boolean",
+      "label": "Mémoriser une disposition par bureau",
+      "default": false,
+      "scope": "device",
+      "description": "Choisissez « Retenir cette disposition pour ce bureau » dans le menu de l’add-on.",
+      "parent": "layoutSection"
+    },
+    {
+      "id": "appearanceSection",
+      "type": "section",
+      "label": "Aperçu des zones",
+      "defaultCollapsed": false
+    },
+    {
+      "id": "profile",
+      "type": "select",
+      "label": "Ambiance",
+      "default": "aurora",
+      "scope": "device",
+      "options": [
+        {
+          "value": "aurora",
+          "label": "Aurore — turquoise et bleu"
+        },
+        {
+          "value": "paper",
+          "label": "Papier — clair et chaleureux"
+        },
+        {
+          "value": "midnight",
+          "label": "Nuit — violet profond"
+        },
+        {
+          "value": "rose",
+          "label": "Rosée — corail et prune"
+        },
+        {
+          "value": "contrast",
+          "label": "Contraste — contours nets"
+        },
+        {
+          "value": "custom",
+          "label": "Mes couleurs"
+        }
+      ],
+      "parent": "appearanceSection",
+      "description": "Ces ambiances changent l’aperçu de placement, pas le contenu des applications."
+    },
+    {
+      "id": "surfaceMode",
+      "type": "select",
+      "label": "Fond des zones",
+      "default": "gradient",
+      "scope": "device",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Couleur unie"
+        },
+        {
+          "value": "gradient",
+          "label": "Dégradé"
+        },
+        {
+          "value": "translucent",
+          "label": "Voile transparent"
+        }
+      ],
+      "parent": "appearanceSection",
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "startColor",
+      "type": "color",
+      "label": "Couleur de départ",
+      "default": "#0B655FFF",
+      "scope": "device",
+      "alpha": true,
+      "parent": "appearanceSection",
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "endColor",
+      "type": "color",
+      "label": "Couleur d’arrivée",
+      "default": "#254AD4FF",
+      "scope": "device",
+      "alpha": true,
+      "parent": "appearanceSection",
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "activeColor",
+      "type": "color",
+      "label": "Zone choisie",
+      "default": "#64F3CCFF",
+      "scope": "device",
+      "alpha": true,
+      "parent": "appearanceSection",
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "textColor",
+      "type": "color",
+      "label": "Texte et numéros",
+      "default": "#FFFFFFFF",
+      "scope": "device",
+      "alpha": true,
+      "parent": "appearanceSection",
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "gradientDirection",
+      "type": "select",
+      "label": "Direction du dégradé",
+      "default": "diagonal",
+      "scope": "device",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "De gauche à droite"
+        },
+        {
+          "value": "vertical",
+          "label": "De haut en bas"
+        },
+        {
+          "value": "diagonal",
+          "label": "En diagonale"
+        }
+      ],
+      "parent": "appearanceSection",
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "opacity",
+      "type": "range",
+      "label": "Présence de l’aperçu (%)",
+      "default": 38,
+      "scope": "device",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "parent": "appearanceSection"
+    },
+    {
+      "id": "activeOpacity",
+      "type": "range",
+      "label": "Présence de la zone choisie (%)",
+      "default": 78,
+      "scope": "device",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "parent": "appearanceSection"
+    },
+    {
+      "id": "cornerRadius",
+      "type": "range",
+      "label": "Coins arrondis (px)",
+      "default": 20,
+      "scope": "device",
+      "min": 0,
+      "max": 48,
+      "step": 1,
+      "parent": "appearanceSection"
+    },
+    {
+      "id": "borderWidth",
+      "type": "range",
+      "label": "Épaisseur des contours (px)",
+      "default": 2,
+      "scope": "device",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "parent": "appearanceSection"
+    },
+    {
+      "id": "shadowDepth",
+      "type": "range",
+      "label": "Ombre douce (px)",
+      "default": 14,
+      "scope": "device",
+      "min": 0,
+      "max": 32,
+      "step": 1,
+      "parent": "appearanceSection"
+    },
+    {
+      "id": "zoneLabels",
+      "type": "boolean",
+      "label": "Afficher les numéros et les noms",
+      "default": true,
+      "scope": "device",
+      "description": "Les numéros permettent de choisir une zone au clavier.",
+      "parent": "appearanceSection"
+    },
+    {
+      "id": "showPreview",
+      "type": "boolean",
+      "label": "Voir les zones pendant le placement",
+      "default": true,
+      "scope": "device",
+      "description": "Maintenez Maj pendant un déplacement Alt pour choisir une zone.",
+      "parent": "appearanceSection"
+    },
+    {
+      "id": "movementSection",
+      "type": "section",
+      "label": "Déplacements et gestes",
+      "defaultCollapsed": false
+    },
+    {
+      "id": "dragAnywhere",
+      "type": "boolean",
+      "label": "Déplacer depuis toute la fenêtre",
+      "default": true,
+      "scope": "device",
+      "description": "Maintenez Alt et faites glisser avec le bouton gauche.",
+      "parent": "movementSection"
+    },
+    {
+      "id": "resizeAnywhere",
+      "type": "boolean",
+      "label": "Redimensionner depuis toute la fenêtre",
+      "default": true,
+      "scope": "device",
+      "description": "Maintenez Alt et faites glisser avec le bouton droit.",
+      "parent": "movementSection"
+    },
+    {
+      "id": "dragModifier",
+      "type": "select",
+      "label": "Touche à maintenir",
+      "default": "alt",
+      "scope": "device",
+      "options": [
+        {
+          "value": "alt",
+          "label": "Alt"
+        },
+        {
+          "value": "win-alt",
+          "label": "Windows + Alt"
+        },
+        {
+          "value": "ctrl-alt",
+          "label": "Ctrl + Alt"
+        }
+      ],
+      "parent": "movementSection"
+    },
+    {
+      "id": "snapDuringDrag",
+      "type": "select",
+      "label": "Placer dans une zone pendant le déplacement",
+      "default": "shift",
+      "scope": "device",
+      "options": [
+        {
+          "value": "shift",
+          "label": "Seulement en maintenant Maj"
+        },
+        {
+          "value": "always",
+          "label": "Toujours"
+        },
+        {
+          "value": "never",
+          "label": "Déplacement libre"
+        }
+      ],
+      "parent": "movementSection"
+    },
+    {
+      "id": "edgeSnap",
+      "type": "boolean",
+      "label": "Placer près des bords de l’écran",
+      "default": true,
+      "scope": "device",
+      "description": "Fonctionne pendant les déplacements Windows classiques et les déplacements Alt.",
+      "parent": "movementSection"
+    },
+    {
+      "id": "edgeDistance",
+      "type": "range",
+      "label": "Distance d’activation des bords (px)",
+      "default": 24,
+      "scope": "device",
+      "min": 4,
+      "max": 80,
+      "step": 1,
+      "parent": "movementSection"
+    },
+    {
+      "id": "respectFullscreen",
+      "type": "boolean",
+      "label": "Laisser tranquilles les applications en plein écran",
+      "default": true,
+      "scope": "device",
+      "description": "Évite de déplacer les jeux et les présentations déjà en plein écran.",
+      "parent": "movementSection"
+    },
+    {
+      "id": "fancyzonesMode",
+      "type": "select",
+      "label": "Avec PowerToys FancyZones",
+      "default": "coexist",
+      "scope": "device",
+      "options": [
+        {
+          "value": "off",
+          "label": "Utiliser seulement cet add-on"
+        },
+        {
+          "value": "coexist",
+          "label": "Laisser les déplacements Maj à FancyZones"
+        }
+      ],
+      "parent": "movementSection",
+      "description": "En mode coopération, les déplacements Windows avec Maj sont laissés à FancyZones. Les raccourcis restent indépendants."
+    },
+    {
+      "id": "motion",
+      "type": "select",
+      "label": "Mouvement des placements",
+      "default": "smooth",
+      "scope": "device",
+      "options": [
+        {
+          "value": "instant",
+          "label": "Immédiat"
+        },
+        {
+          "value": "smooth",
+          "label": "Doux"
+        },
+        {
+          "value": "spring",
+          "label": "Ressort discret"
+        }
+      ],
+      "parent": "movementSection"
+    },
+    {
+      "id": "duration",
+      "type": "range",
+      "label": "Durée du mouvement (ms)",
+      "default": 180,
+      "scope": "device",
+      "min": 0,
+      "max": 500,
+      "step": 10,
+      "parent": "movementSection"
+    },
+    {
+      "id": "reducedMotion",
+      "type": "boolean",
+      "label": "Réduire les animations",
+      "default": false,
+      "scope": "device",
+      "description": "Les préférences d’animation de Windows sont aussi respectées.",
+      "parent": "movementSection"
+    },
+    {
+      "id": "shortcutSection",
+      "type": "section",
+      "label": "Raccourcis",
+      "defaultCollapsed": true
+    },
+    {
+      "id": "hotkeyPrefix",
+      "type": "select",
+      "label": "Touches des raccourcis",
+      "default": "ctrl-alt",
+      "scope": "device",
+      "options": [
+        {
+          "value": "ctrl-alt",
+          "label": "Ctrl + Alt"
+        },
+        {
+          "value": "win-alt",
+          "label": "Windows + Alt"
+        },
+        {
+          "value": "ctrl-shift",
+          "label": "Ctrl + Maj"
+        },
+        {
+          "value": "off",
+          "label": "Désactiver"
+        }
+      ],
+      "parent": "shortcutSection",
+      "description": "Les combinaisons déjà utilisées par une autre application sont signalées et laissées libres."
+    },
+    {
+      "id": "paletteKey",
+      "type": "string",
+      "label": "Afficher toutes les zones",
+      "default": "Space",
+      "scope": "device",
+      "parent": "shortcutSection",
+      "description": "Avec les touches choisies ci-dessus. Les touches 1 à 9, les flèches et Entrée choisissent une zone ; Échap ferme l’aperçu."
+    },
+    {
+      "id": "centerKey",
+      "type": "string",
+      "label": "Centrer la fenêtre",
+      "default": "C",
+      "scope": "device",
+      "parent": "shortcutSection",
+      "description": "Une lettre, un chiffre, une flèche, Space ou F1 à F24. Vide pour désactiver."
+    },
+    {
+      "id": "restoreKey",
+      "type": "string",
+      "label": "Revenir au placement précédent",
+      "default": "R",
+      "scope": "device",
+      "parent": "shortcutSection",
+      "description": "Remet aussi une fenêtre sortie du plein écran à sa taille précédente."
+    },
+    {
+      "id": "nextMonitorKey",
+      "type": "string",
+      "label": "Déplacer vers l’écran suivant",
+      "default": "N",
+      "scope": "device",
+      "parent": "shortcutSection",
+      "description": "Conserve les proportions et la position relative dans la zone de travail."
+    },
+    {
+      "id": "topmostKey",
+      "type": "string",
+      "label": "Garder au premier plan",
+      "default": "T",
+      "scope": "device",
+      "parent": "shortcutSection",
+      "description": "Une seconde pression désactive le premier plan."
+    },
+    {
+      "id": "trayKey",
+      "type": "string",
+      "label": "Ranger dans la zone de notification",
+      "default": "M",
+      "scope": "device",
+      "parent": "shortcutSection",
+      "description": "Pour la retrouver, ouvrez le menu de l’add-on dans la zone de notification."
+    },
+    {
+      "id": "rememberKey",
+      "type": "string",
+      "label": "Retenir cette position",
+      "default": "P",
+      "scope": "device",
+      "parent": "shortcutSection",
+      "description": "La position sera proposée à la prochaine ouverture de cette application."
+    },
+    {
+      "id": "fullscreenKey",
+      "type": "string",
+      "label": "Plein écran réversible",
+      "default": "F",
+      "scope": "device",
+      "parent": "shortcutSection",
+      "description": "Retire temporairement le cadre ; une seconde pression le remet."
+    },
+    {
+      "id": "arrowShortcuts",
+      "type": "boolean",
+      "label": "Activer les flèches et le pavé numérique",
+      "default": true,
+      "scope": "device",
+      "description": "Flèches : moitiés. Pavé 1, 3, 7 et 9 : quarts. Pavé 5 : centrer.",
+      "parent": "shortcutSection"
+    },
+    {
+      "id": "touchpadShortcut",
+      "type": "boolean",
+      "label": "Activer un raccourci pour le pavé tactile",
+      "default": false,
+      "scope": "device",
+      "description": "Configurez un geste à trois ou quatre doigts dans Windows pour envoyer Ctrl + Maj + F12. Ce geste ouvre les zones ; cet add-on ne lit pas les contacts du pavé.",
+      "parent": "shortcutSection"
+    },
+    {
+      "id": "rulesSection",
+      "type": "section",
+      "label": "À l’ouverture des applications",
+      "defaultCollapsed": true
+    },
+    {
+      "id": "newWindowAction",
+      "type": "select",
+      "label": "Pour les autres nouvelles fenêtres",
+      "default": "none",
+      "scope": "device",
+      "options": [
+        {
+          "value": "none",
+          "label": "Ne rien changer"
+        },
+        {
+          "value": "zone1",
+          "label": "Première zone"
+        },
+        {
+          "value": "center",
+          "label": "Centrer"
+        },
+        {
+          "value": "maximize",
+          "label": "Agrandir"
+        }
+      ],
+      "parent": "rulesSection"
+    },
+    {
+      "id": "rememberOnMove",
+      "type": "boolean",
+      "label": "Retenir les placements effectués ici",
+      "default": false,
+      "scope": "device",
+      "description": "Mémorise les placements par application, classe de fenêtre et bureau.",
+      "parent": "rulesSection"
+    },
+    {
+      "id": "centerSize",
+      "type": "select",
+      "label": "Dimensions au centrage",
+      "default": "keep",
+      "scope": "device",
+      "options": [
+        {
+          "value": "keep",
+          "label": "Conserver la taille"
+        },
+        {
+          "value": "compact",
+          "label": "Compact : 50 % de l’écran"
+        },
+        {
+          "value": "comfortable",
+          "label": "Confortable : 70 %"
+        },
+        {
+          "value": "large",
+          "label": "Large : 88 %"
+        },
+        {
+          "value": "custom",
+          "label": "Choisir les proportions"
+        }
+      ],
+      "parent": "rulesSection"
+    },
+    {
+      "id": "centerWidth",
+      "type": "range",
+      "label": "Largeur au centrage (%)",
+      "default": 70,
+      "scope": "device",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "parent": "rulesSection",
+      "showIf": {
+        "setting": "centerSize",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "centerHeight",
+      "type": "range",
+      "label": "Hauteur au centrage (%)",
+      "default": 75,
+      "scope": "device",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "parent": "rulesSection",
+      "showIf": {
+        "setting": "centerSize",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "ruleApp1",
+      "type": "string",
+      "label": "Application 1",
+      "default": "",
+      "scope": "device",
+      "parent": "rulesSection",
+      "description": "Nom de l’application, par exemple notepad.exe. Plusieurs noms peuvent être séparés par une virgule ; aucune règle n’est nécessaire pour le placement manuel."
+    },
+    {
+      "id": "ruleAction1",
+      "type": "select",
+      "label": "Placement de l’application 1",
+      "default": "none",
+      "scope": "device",
+      "options": [
+        {
+          "value": "none",
+          "label": "Ne rien changer"
+        },
+        {
+          "value": "left",
+          "label": "Moitié gauche"
+        },
+        {
+          "value": "right",
+          "label": "Moitié droite"
+        },
+        {
+          "value": "top-left",
+          "label": "Quart supérieur gauche"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Quart inférieur droit"
+        },
+        {
+          "value": "zone1",
+          "label": "Première zone"
+        },
+        {
+          "value": "zone2",
+          "label": "Deuxième zone"
+        },
+        {
+          "value": "zone3",
+          "label": "Troisième zone"
+        },
+        {
+          "value": "center",
+          "label": "Centrer"
+        },
+        {
+          "value": "maximize",
+          "label": "Agrandir"
+        },
+        {
+          "value": "fullscreen",
+          "label": "Plein écran réversible"
+        }
+      ],
+      "parent": "rulesSection"
+    },
+    {
+      "id": "ruleMonitor1",
+      "type": "select",
+      "label": "Écran de l’application 1",
+      "default": "window",
+      "scope": "device",
+      "options": [
+        {
+          "value": "window",
+          "label": "Son écran actuel"
+        },
+        {
+          "value": "primary",
+          "label": "Écran principal"
+        },
+        {
+          "value": "cursor",
+          "label": "Écran du pointeur"
+        }
+      ],
+      "parent": "rulesSection"
+    },
+    {
+      "id": "ruleTopmost1",
+      "type": "boolean",
+      "label": "Application 1 au premier plan",
+      "default": false,
+      "scope": "device",
+      "description": "Appliqué seulement aux nouvelles fenêtres correspondantes.",
+      "parent": "rulesSection"
+    },
+    {
+      "id": "ruleApp2",
+      "type": "string",
+      "label": "Application 2",
+      "default": "",
+      "scope": "device",
+      "parent": "rulesSection",
+      "description": "Nom de l’application, par exemple notepad.exe. Plusieurs noms peuvent être séparés par une virgule ; aucune règle n’est nécessaire pour le placement manuel."
+    },
+    {
+      "id": "ruleAction2",
+      "type": "select",
+      "label": "Placement de l’application 2",
+      "default": "none",
+      "scope": "device",
+      "options": [
+        {
+          "value": "none",
+          "label": "Ne rien changer"
+        },
+        {
+          "value": "left",
+          "label": "Moitié gauche"
+        },
+        {
+          "value": "right",
+          "label": "Moitié droite"
+        },
+        {
+          "value": "top-left",
+          "label": "Quart supérieur gauche"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Quart inférieur droit"
+        },
+        {
+          "value": "zone1",
+          "label": "Première zone"
+        },
+        {
+          "value": "zone2",
+          "label": "Deuxième zone"
+        },
+        {
+          "value": "zone3",
+          "label": "Troisième zone"
+        },
+        {
+          "value": "center",
+          "label": "Centrer"
+        },
+        {
+          "value": "maximize",
+          "label": "Agrandir"
+        },
+        {
+          "value": "fullscreen",
+          "label": "Plein écran réversible"
+        }
+      ],
+      "parent": "rulesSection"
+    },
+    {
+      "id": "ruleMonitor2",
+      "type": "select",
+      "label": "Écran de l’application 2",
+      "default": "window",
+      "scope": "device",
+      "options": [
+        {
+          "value": "window",
+          "label": "Son écran actuel"
+        },
+        {
+          "value": "primary",
+          "label": "Écran principal"
+        },
+        {
+          "value": "cursor",
+          "label": "Écran du pointeur"
+        }
+      ],
+      "parent": "rulesSection"
+    },
+    {
+      "id": "ruleTopmost2",
+      "type": "boolean",
+      "label": "Application 2 au premier plan",
+      "default": false,
+      "scope": "device",
+      "description": "Appliqué seulement aux nouvelles fenêtres correspondantes.",
+      "parent": "rulesSection"
+    },
+    {
+      "id": "ruleApp3",
+      "type": "string",
+      "label": "Application 3",
+      "default": "",
+      "scope": "device",
+      "parent": "rulesSection",
+      "description": "Nom de l’application, par exemple notepad.exe. Plusieurs noms peuvent être séparés par une virgule ; aucune règle n’est nécessaire pour le placement manuel."
+    },
+    {
+      "id": "ruleAction3",
+      "type": "select",
+      "label": "Placement de l’application 3",
+      "default": "none",
+      "scope": "device",
+      "options": [
+        {
+          "value": "none",
+          "label": "Ne rien changer"
+        },
+        {
+          "value": "left",
+          "label": "Moitié gauche"
+        },
+        {
+          "value": "right",
+          "label": "Moitié droite"
+        },
+        {
+          "value": "top-left",
+          "label": "Quart supérieur gauche"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Quart inférieur droit"
+        },
+        {
+          "value": "zone1",
+          "label": "Première zone"
+        },
+        {
+          "value": "zone2",
+          "label": "Deuxième zone"
+        },
+        {
+          "value": "zone3",
+          "label": "Troisième zone"
+        },
+        {
+          "value": "center",
+          "label": "Centrer"
+        },
+        {
+          "value": "maximize",
+          "label": "Agrandir"
+        },
+        {
+          "value": "fullscreen",
+          "label": "Plein écran réversible"
+        }
+      ],
+      "parent": "rulesSection"
+    },
+    {
+      "id": "ruleMonitor3",
+      "type": "select",
+      "label": "Écran de l’application 3",
+      "default": "window",
+      "scope": "device",
+      "options": [
+        {
+          "value": "window",
+          "label": "Son écran actuel"
+        },
+        {
+          "value": "primary",
+          "label": "Écran principal"
+        },
+        {
+          "value": "cursor",
+          "label": "Écran du pointeur"
+        }
+      ],
+      "parent": "rulesSection"
+    },
+    {
+      "id": "ruleTopmost3",
+      "type": "boolean",
+      "label": "Application 3 au premier plan",
+      "default": false,
+      "scope": "device",
+      "description": "Appliqué seulement aux nouvelles fenêtres correspondantes.",
+      "parent": "rulesSection"
+    },
+    {
+      "id": "focusSection",
+      "type": "section",
+      "label": "Applications à respecter",
+      "defaultCollapsed": true
+    },
+    {
+      "id": "excludedApps",
+      "type": "string",
+      "label": "Ne jamais modifier ces applications",
+      "default": "",
+      "scope": "device",
+      "parent": "focusSection",
+      "description": "Noms séparés par une virgule. Les fenêtres du shell et de MyWallpaper sont toujours exclues."
+    },
+    {
+      "id": "onlyApps",
+      "type": "string",
+      "label": "Agir seulement sur ces applications",
+      "default": "",
+      "scope": "device",
+      "parent": "focusSection",
+      "description": "Laissez vide pour autoriser les fenêtres ordinaires. Sinon, indiquez leurs noms séparés par une virgule."
+    },
+    {
+      "id": "focusGuard",
+      "type": "boolean",
+      "label": "Rendre le focus après une ouverture inattendue",
+      "default": false,
+      "scope": "device",
+      "description": "Protection externe limitée : après une ouverture sans saisie récente, tente de rendre le focus à votre fenêtre et fait clignoter l’arrivante. Windows peut refuser cette restitution.",
+      "parent": "focusSection"
+    },
+    {
+      "id": "focusGrace",
+      "type": "range",
+      "label": "Délai après votre dernière action (ms)",
+      "default": 1000,
+      "scope": "device",
+      "min": 300,
+      "max": 5000,
+      "step": 100,
+      "parent": "focusSection"
+    },
+    {
+      "id": "advancedSection",
+      "type": "section",
+      "label": "Personnalisation avancée",
+      "defaultCollapsed": true
+    },
+    {
+      "id": "advancedEnabled",
+      "type": "boolean",
+      "label": "Ajouter des zones sur mesure",
+      "default": false,
+      "scope": "device",
+      "description": "Facultatif : la grille et les réglages usuels fonctionnent sans texte technique.",
+      "parent": "advancedSection"
+    },
+    {
+      "id": "advancedZones",
+      "type": "string",
+      "label": "Zones normalisées (JSON facultatif)",
+      "default": "",
+      "scope": "device",
+      "parent": "advancedSection",
+      "description": "Tableau de 12 zones au maximum : [{\"x\":0,\"y\":0,\"width\":0.5,\"height\":1,\"name\":\"Lecture\"}]. Les nombres sont des proportions de 0 à 1.",
+      "showIf": {
+        "setting": "advancedEnabled",
+        "equals": true
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "calm",
+      "name": "Bureau calme",
+      "settings": {
+        "layout": "duo",
+        "columns": 3,
+        "gridColumns": 3,
+        "gridRows": 2,
+        "mainShare": 64,
+        "splitShare": 50,
+        "outerGap": 12,
+        "innerGap": 12,
+        "opacity": 38,
+        "activeOpacity": 78,
+        "cornerRadius": 20,
+        "borderWidth": 2,
+        "shadowDepth": 14,
+        "zoneLabels": true,
+        "motion": "smooth",
+        "duration": 180,
+        "profile": "custom",
+        "surfaceMode": "gradient",
+        "startColor": "#0B655FFF",
+        "endColor": "#254AD4FF",
+        "activeColor": "#64F3CCFF",
+        "textColor": "#FFFFFFFF",
+        "gradientDirection": "diagonal"
+      }
+    },
+    {
+      "id": "reading",
+      "name": "Lecture sur papier",
+      "settings": {
+        "layout": "focus",
+        "columns": 3,
+        "gridColumns": 3,
+        "gridRows": 2,
+        "mainShare": 64,
+        "splitShare": 50,
+        "outerGap": 20,
+        "innerGap": 16,
+        "opacity": 78,
+        "activeOpacity": 95,
+        "cornerRadius": 8,
+        "borderWidth": 2,
+        "shadowDepth": 14,
+        "zoneLabels": true,
+        "motion": "smooth",
+        "duration": 180,
+        "profile": "custom",
+        "surfaceMode": "solid",
+        "startColor": "#F6EBD4FF",
+        "endColor": "#F6EBD4FF",
+        "activeColor": "#965018FF",
+        "textColor": "#291D10FF",
+        "gradientDirection": "vertical"
+      }
+    },
+    {
+      "id": "studio",
+      "name": "Studio nocturne",
+      "settings": {
+        "layout": "columns",
+        "columns": 3,
+        "gridColumns": 3,
+        "gridRows": 2,
+        "mainShare": 64,
+        "splitShare": 50,
+        "outerGap": 16,
+        "innerGap": 12,
+        "opacity": 60,
+        "activeOpacity": 88,
+        "cornerRadius": 16,
+        "borderWidth": 2,
+        "shadowDepth": 14,
+        "zoneLabels": true,
+        "motion": "spring",
+        "duration": 180,
+        "profile": "custom",
+        "surfaceMode": "gradient",
+        "startColor": "#192144FF",
+        "endColor": "#632D83FF",
+        "activeColor": "#E2B6FFFF",
+        "textColor": "#FFFFFFFF",
+        "gradientDirection": "vertical"
+      }
+    },
+    {
+      "id": "mosaic",
+      "name": "Mosaïque rosée",
+      "settings": {
+        "layout": "quad",
+        "columns": 3,
+        "gridColumns": 3,
+        "gridRows": 2,
+        "mainShare": 64,
+        "splitShare": 50,
+        "outerGap": 16,
+        "innerGap": 16,
+        "opacity": 52,
+        "activeOpacity": 86,
+        "cornerRadius": 24,
+        "borderWidth": 2,
+        "shadowDepth": 14,
+        "zoneLabels": true,
+        "motion": "smooth",
+        "duration": 180,
+        "profile": "custom",
+        "surfaceMode": "gradient",
+        "startColor": "#9D3657FF",
+        "endColor": "#3F2558FF",
+        "activeColor": "#FFDAA5FF",
+        "textColor": "#FFFFFFFF",
+        "gradientDirection": "horizontal"
+      }
+    },
+    {
+      "id": "clear",
+      "name": "Repères à fort contraste",
+      "settings": {
+        "layout": "duo",
+        "columns": 3,
+        "gridColumns": 3,
+        "gridRows": 2,
+        "mainShare": 64,
+        "splitShare": 50,
+        "outerGap": 12,
+        "innerGap": 12,
+        "opacity": 94,
+        "activeOpacity": 100,
+        "cornerRadius": 0,
+        "borderWidth": 4,
+        "shadowDepth": 0,
+        "zoneLabels": true,
+        "motion": "instant",
+        "duration": 180,
+        "profile": "custom",
+        "surfaceMode": "solid",
+        "startColor": "#101010FF",
+        "endColor": "#101010FF",
+        "activeColor": "#FFDF00FF",
+        "textColor": "#FFFFFFFF",
+        "gradientDirection": "vertical"
+      }
+    }
+  ],
+  "native": {
+    "companion": {
+      "runtime": "process-v2",
+      "entries": {
+        "windows-x86_64": "native/out/windows-x86_64/companion.exe"
+      }
+    }
+  }
+}

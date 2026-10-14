@@ -1,0 +1,29 @@
+{
+  "id": "reading",
+  "name": "Lecture sur papier",
+  "settings": {
+    "layout": "focus",
+    "columns": 3,
+    "gridColumns": 3,
+    "gridRows": 2,
+    "mainShare": 64,
+    "splitShare": 50,
+    "outerGap": 20,
+    "innerGap": 16,
+    "opacity": 78,
+    "activeOpacity": 95,
+    "cornerRadius": 8,
+    "borderWidth": 2,
+    "shadowDepth": 14,
+    "zoneLabels": true,
+    "motion": "smooth",
+    "duration": 180,
+    "profile": "custom",
+    "surfaceMode": "solid",
+    "startColor": "#F6EBD4FF",
+    "endColor": "#F6EBD4FF",
+    "activeColor": "#965018FF",
+    "textColor": "#291D10FF",
+    "gradientDirection": "vertical"
+  }
+}

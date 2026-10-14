@@ -1,0 +1,29 @@
+{
+  "id": "studio",
+  "name": "Studio nocturne",
+  "settings": {
+    "layout": "columns",
+    "columns": 3,
+    "gridColumns": 3,
+    "gridRows": 2,
+    "mainShare": 64,
+    "splitShare": 50,
+    "outerGap": 16,
+    "innerGap": 12,
+    "opacity": 60,
+    "activeOpacity": 88,
+    "cornerRadius": 16,
+    "borderWidth": 2,
+    "shadowDepth": 14,
+    "zoneLabels": true,
+    "motion": "spring",
+    "duration": 180,
+    "profile": "custom",
+    "surfaceMode": "gradient",
+    "startColor": "#192144FF",
+    "endColor": "#632D83FF",
+    "activeColor": "#E2B6FFFF",
+    "textColor": "#FFFFFFFF",
+    "gradientDirection": "vertical"
+  }
+}

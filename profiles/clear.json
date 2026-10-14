@@ -1,0 +1,29 @@
+{
+  "id": "clear",
+  "name": "Repères à fort contraste",
+  "settings": {
+    "layout": "duo",
+    "columns": 3,
+    "gridColumns": 3,
+    "gridRows": 2,
+    "mainShare": 64,
+    "splitShare": 50,
+    "outerGap": 12,
+    "innerGap": 12,
+    "opacity": 94,
+    "activeOpacity": 100,
+    "cornerRadius": 0,
+    "borderWidth": 4,
+    "shadowDepth": 0,
+    "zoneLabels": true,
+    "motion": "instant",
+    "duration": 180,
+    "profile": "custom",
+    "surfaceMode": "solid",
+    "startColor": "#101010FF",
+    "endColor": "#101010FF",
+    "activeColor": "#FFDF00FF",
+    "textColor": "#FFFFFFFF",
+    "gradientDirection": "vertical"
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "date": "2026-10-14T22:56:11.095Z",
+  "qualification": "private external Win32 fixture; no Explorer or user application modified",
+  "os": "Microsoft Windows [version 10.0.26200.9550]",
+  "binarySha256": "347ec5e9f51b766d56d730905698445f513c831ae69bb086468803d92b7a7aa6",
+  "ledgerSha256": "5c198b56bd404e3e035f31687e2ed23b7c0d87655e998bd0940fa2649ddae993",
+  "summary": {
+    "passed": 23,
+    "capabilityProbes": 1
+  },
+  "results": [
+    {
+      "name": "process-v2 initialization and guardian",
+      "status": "passed",
+      "contained": true,
+      "desktopApi": true,
+      "enabled": true,
+      "event": "status",
+      "guardianRunning": true,
+      "hotkeyConflicts": [],
+      "monitors": [
+        {
+          "device": "\\\\.\\DISPLAY1",
+          "dpi": 96,
+          "work": [
+            0,
+            0,
+            2560,
+            1440
+          ]
+        }
+      ],
+      "notice": "",
+      "placements": 0,
+      "targetImage": "window_fixture.exe",
+      "trayMode": "minimize-accessible"
+    },
+    {
+      "name": "three palette reopenings keep topmost hit-testing and mouse selection",
+      "status": "passed"
+    },
+    {
+      "name": "visible DWM bounds, reserved work area and DPI gaps",
+      "status": "passed",
+      "before": {
+        "dpi": 96,
+        "exStyle": 134217984,
+        "index": 0,
+        "minimized": false,
+        "rect": [
+          60,
+          60,
+          480,
+          300
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          67,
+          60,
+          466,
+          293
+        ],
+        "window": 40964138,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      },
+      "after": {
+        "dpi": 96,
+        "exStyle": 134217984,
+        "index": 0,
+        "minimized": false,
+        "rect": [
+          5,
+          12,
+          1276,
+          1423
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          12,
+          12,
+          1262,
+          1416
+        ],
+        "window": 40964138,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      }
+    },
+    {
+      "name": "quarters",
+      "status": "passed",
+      "state": {
+        "dpi": 96,
+        "exStyle": 134217984,
+        "index": 0,
+        "minimized": false,
+        "rect": [
+          1279,
+          726,
+          1276,
+          709
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          1286,
+          726,
+          1262,
+          702
+        ],
+        "window": 40964138,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      }
+    },
+    {
+      "name": "centering and native animation",
+      "status": "passed",
+      "state": {
+        "dpi": 96,
+        "exStyle": 134217984,
+        "index": 0,
+        "minimized": false,
+        "rect": [
+          377,
+          216,
+          1806,
+          1014
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          384,
+          216,
+          1792,
+          1007
+        ],
+        "window": 40964138,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      }
+    },
+    {
+      "name": "restore first placement",
+      "status": "passed"
+    },
+    {
+      "name": "instant placement memory waits for the asynchronous window request",
+      "status": "passed",
+      "heldMs": 450,
+      "state": {
+        "dpi": 96,
+        "exStyle": 134217984,
+        "index": 0,
+        "minimized": false,
+        "rect": [
+          1279,
+          12,
+          1276,
+          1423
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          1286,
+          12,
+          1262,
+          1416
+        ],
+        "window": 40964138,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      },
+      "saved": {
+        "height": 0.9833333333333333,
+        "monitor": "\\\\.\\DISPLAY1",
+        "width": 0.49296875,
+        "x": 0.50234375,
+        "y": 0.008333333333333333
+      }
+    },
+    {
+      "name": "topmost toggle",
+      "status": "passed"
+    },
+    {
+      "name": "reversible fullscreen",
+      "status": "passed"
+    },
+    {
+      "name": "invalid settings keep previous configuration active",
+      "status": "passed"
+    },
+    {
+      "name": "ordered process-v2 records larger than one MiB",
+      "status": "passed"
+    },
+    {
+      "name": "explicit memory and WinEvent opening restore",
+      "status": "passed",
+      "state": {
+        "dpi": 96,
+        "exStyle": 134217984,
+        "index": 2,
+        "minimized": false,
+        "rect": [
+          1279,
+          12,
+          1276,
+          1423
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          1286,
+          12,
+          1262,
+          1416
+        ],
+        "window": 5701940,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      }
+    },
+    {
+      "name": "application opening rule",
+      "status": "passed"
+    },
+    {
+      "name": "application exclusion",
+      "status": "passed"
+    },
+    {
+      "name": "add-on-owned work-area input contract",
+      "status": "passed",
+      "area": {
+        "x": 20,
+        "y": 20,
+        "width": 2520,
+        "height": 1400
+      }
+    },
+    {
+      "name": "disable restores owned fullscreen, tray and topmost states",
+      "status": "passed"
+    },
+    {
+      "name": "reset to defaults and re-enable",
+      "status": "passed"
+    },
+    {
+      "name": "five profiles rendered by native GDI+ overlay",
+      "status": "passed"
+    },
+    {
+      "name": "public virtual desktop API capability probe",
+      "status": "unavailable-for-fixture",
+      "result": {
+        "event": "rejected",
+        "message": "Ce bureau n’est pas accessible par l’API Windows"
+      }
+    },
+    {
+      "name": "graceful shutdown",
+      "status": "passed"
+    },
+    {
+      "name": "stdin EOF restoration",
+      "status": "passed"
+    },
+    {
+      "name": "forced companion termination with surviving guardian",
+      "status": "passed",
+      "contained": true
+    },
+    {
+      "name": "whole Job Object termination keeps tray window accessible",
+      "status": "passed",
+      "state": {
+        "dpi": 96,
+        "exStyle": 134217984,
+        "index": 0,
+        "minimized": true,
+        "rect": [
+          0,
+          1412,
+          160,
+          28
+        ],
+        "style": 885981184,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          7,
+          1412,
+          146,
+          28
+        ],
+        "window": 40964138,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      }
+    },
+    {
+      "name": "next activation recovers stale journal after entire job termination",
+      "status": "passed"
+    }
+  ],
+  "remaining": [
+    "real application matrix",
+    "mixed DPI monitors and display unplug",
+    "real mouse/keyboard/touchpad gestures",
+    "Explorer Snap Layout private hooks",
+    "FancyZones coexistence in live drag",
+    "focus restoration heuristic under real activation restrictions",
+    "desktop switches across multiple actual virtual desktops",
+    "tray hiding outside a Job Object; current fixture uses accessible minimization"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "implementation audit evidence; decision ledger remains sole authority",
+  "date": "2026-10-13",
+  "ledgerAtRuntimeTest": "ed477485a495b1e6ff9e931dfae5378461378c4c57977a4e436e753ca9ddba6c",
+  "ledgerAtRecheck": "640be5b1751a9c2308c45e460d8d10f9f2612751ce86d4bfbdd29c36cdc44e65",
+  "decisionsRead": [
+    "DEC-0012",
+    "DEC-0013",
+    "DEC-0099",
+    "DEC-0157",
+    "DEC-0160"
+  ],
+  "settingsMaximumVerified": 100,
+  "settingsDefinitions": 77,
+  "sourceOwnership": "dedicated add-on repository",
+  "launchRatification": "none",
+  "classification": "conforme aux contraintes applicables relues",
+  "decisionTextHashes": {
+    "DEC-0012": "7bcc7d2d21a5f59411b900b19fe10da695805036ef55b5ec7049c0be04c9c8cb",
+    "DEC-0013": "d7c9d806d74d863aa89f8d7e2379912e9095c19b16769dc5f32a039fe36bfc67",
+    "DEC-0099": "dfdd931c7547c490dad86da2b276a47c627cbd1fc140481c177f3c0ef7915f30",
+    "DEC-0157": "d5457ac2b89a30015c2fd8db287be851ebcc950b5100b83c05f161437018443f",
+    "DEC-0160": "eab54f79c00f14c1b70a3a5bca4b2e177fad230d8e81afb54a7f9da13b590ac7"
+  }
+}

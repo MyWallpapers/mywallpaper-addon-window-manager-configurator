@@ -1,0 +1,109 @@
+{
+  "examinedOn": "2026-10-13",
+  "coreCommit": "299548ebcc20770fd73b10bdffd5f05586fbe126",
+  "ledgerSha256": "ed477485a495b1e6ff9e931dfae5378461378c4c57977a4e436e753ca9ddba6c",
+  "catalogueCommit": "8d60b4c4113a7f0a18b4b48a5443a199acf54805",
+  "engineReferenceCommit": "ff32c520dd4ccd9073c9dc001a180e886d50ab63",
+  "references": [
+    {
+      "id": "always-on-top",
+      "sourceUrl": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/always-on-top.wh.cpp",
+      "catalogueSha256": "fd951a7117b2c484eb5b5c3650d84c0c9862a23340a1bd31a358a1ae59a981eb",
+      "downloadSha256": "34a8d6e203d9b21bcb560df50ea72ec6bd85eb2d92f97d04d8fd2aaefc2f80a0",
+      "catalogueMatches": [
+        "crlf"
+      ],
+      "licenceEvidence": "Licence déclarée : MIT",
+      "lineCount": 647
+    },
+    {
+      "id": "minimize-to-tray",
+      "sourceUrl": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/minimize-to-tray.wh.cpp",
+      "catalogueSha256": "359566b7e81c38a747884f1d7be96bf15b866e37a5ceb4022ad8407d49427d0d",
+      "downloadSha256": "8fb9479a218791b541818991fe1a427631ee8642175b31b2bd3e6ded9790050c",
+      "catalogueMatches": [
+        "crlf"
+      ],
+      "licenceEvidence": "Licence déclarée : MIT",
+      "lineCount": 1901
+    },
+    {
+      "id": "window-center-resize",
+      "sourceUrl": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/window-center-resize.wh.cpp",
+      "catalogueSha256": "f27598e90f3db90af675e45edbf86b9d7befd047a4e3d130812bc5a8879a53ad",
+      "downloadSha256": "f27598e90f3db90af675e45edbf86b9d7befd047a4e3d130812bc5a8879a53ad",
+      "catalogueMatches": [
+        "raw",
+        "crlf"
+      ],
+      "licenceEvidence": "Licence déclarée : MIT",
+      "lineCount": 567
+    },
+    {
+      "id": "center-new-windows",
+      "sourceUrl": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/center-new-windows.wh.cpp",
+      "catalogueSha256": "153bde34101689ecdc838f514e7a9504f45b372a9fd26cd17c14f55b492e0816",
+      "downloadSha256": "504767639d03607e518484064dd71d5e4981e74f7acdd5f7d8c0b18a8bdd23cc",
+      "catalogueMatches": [
+        "crlf"
+      ],
+      "licenceEvidence": "Licence déclarée : MIT",
+      "lineCount": 1289
+    },
+    {
+      "id": "snap-commander",
+      "sourceUrl": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/snap-commander.wh.cpp",
+      "catalogueSha256": "453379edefe90f130495e6e740ead4fb98732141ee424abf1fb8a61f80e712f9",
+      "downloadSha256": "f56925bf0fd5f9e3904733cd3ecc5665b64cdadfa1ac0598ca5f2fc7635447ea",
+      "catalogueMatches": [
+        "crlf"
+      ],
+      "licenceEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier",
+      "lineCount": 1695
+    },
+    {
+      "id": "prevent-focus-stealing",
+      "sourceUrl": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/prevent-focus-stealing.wh.cpp",
+      "catalogueSha256": "5af0a803cb9bda0a033162cb6def4e3bbc3c6a43aaf80c465eabe4c72e7ca734",
+      "downloadSha256": "50944106cf5bdd7f9e40f287f9bfa98aec34397c15654bc8acef655f5489e755",
+      "catalogueMatches": [
+        "crlf"
+      ],
+      "licenceEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier",
+      "lineCount": 506
+    },
+    {
+      "id": "snap-flyout-instant",
+      "sourceUrl": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/snap-flyout-instant.wh.cpp",
+      "catalogueSha256": "a2751310e2d08acc0ceac7a25d5d90789a915711ead9d9cfb1771559dd3745b9",
+      "downloadSha256": "bda418daf7b90d6b8297b5bb4a2e42c87fd24bfe47db0a2c86872ec4f1c02f2d",
+      "catalogueMatches": [
+        "crlf"
+      ],
+      "licenceEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier",
+      "lineCount": 147
+    },
+    {
+      "id": "three-finger-drag",
+      "sourceUrl": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/three-finger-drag.wh.cpp",
+      "catalogueSha256": "bde2bc6b6a4a048197ae549b6b33e91f57b53a69609edb3f9cd8416215a84a15",
+      "downloadSha256": "fce922c24a5acec061abd21c72f9c45eea42c339001ce3004e27a460dd61e428",
+      "catalogueMatches": [
+        "crlf"
+      ],
+      "licenceEvidence": "GPL signalé dans le préambule",
+      "lineCount": 4326
+    },
+    {
+      "id": "windows-11-native-four-column-snap-layout",
+      "sourceUrl": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/windows-11-native-four-column-snap-layout.wh.cpp",
+      "catalogueSha256": "7e8887349df50d96c760e386892de8cb3e68d60114ad833fe1ac2b3b7eef95b3",
+      "downloadSha256": "dbf4477670a305677b576417a0dd229c00a064cd20ade4cdc113c2a7091086d3",
+      "catalogueMatches": [
+        "crlf"
+      ],
+      "licenceEvidence": "Licence déclarée : MIT",
+      "lineCount": 864
+    }
+  ]
+}

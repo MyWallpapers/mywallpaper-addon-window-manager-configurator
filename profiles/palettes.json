@@ -1,0 +1,42 @@
+{
+  "aurora": {
+    "surfaceMode": "gradient",
+    "startColor": "#0B655FFF",
+    "endColor": "#254AD4FF",
+    "activeColor": "#64F3CCFF",
+    "textColor": "#FFFFFFFF",
+    "gradientDirection": "diagonal"
+  },
+  "paper": {
+    "surfaceMode": "solid",
+    "startColor": "#F6EBD4FF",
+    "endColor": "#F6EBD4FF",
+    "activeColor": "#965018FF",
+    "textColor": "#291D10FF",
+    "gradientDirection": "vertical"
+  },
+  "midnight": {
+    "surfaceMode": "gradient",
+    "startColor": "#192144FF",
+    "endColor": "#632D83FF",
+    "activeColor": "#E2B6FFFF",
+    "textColor": "#FFFFFFFF",
+    "gradientDirection": "vertical"
+  },
+  "rose": {
+    "surfaceMode": "gradient",
+    "startColor": "#9D3657FF",
+    "endColor": "#3F2558FF",
+    "activeColor": "#FFDAA5FF",
+    "textColor": "#FFFFFFFF",
+    "gradientDirection": "horizontal"
+  },
+  "contrast": {
+    "surfaceMode": "solid",
+    "startColor": "#101010FF",
+    "endColor": "#101010FF",
+    "activeColor": "#FFDF00FF",
+    "textColor": "#FFFFFFFF",
+    "gradientDirection": "vertical"
+  }
+}

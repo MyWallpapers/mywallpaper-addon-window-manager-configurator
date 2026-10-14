@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "json": {
+    "engineReferenceCommit": "ff32c520dd4ccd9073c9dc001a180e886d50ab63",
+    "path": "third_party/nlohmann/json.hpp",
+    "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63",
+    "noticePath": "third_party/nlohmann/LICENSE.MIT",
+    "noticeSha256": "46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603"
+  }
+}

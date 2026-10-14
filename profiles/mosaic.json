@@ -1,0 +1,29 @@
+{
+  "id": "mosaic",
+  "name": "Mosaïque rosée",
+  "settings": {
+    "layout": "quad",
+    "columns": 3,
+    "gridColumns": 3,
+    "gridRows": 2,
+    "mainShare": 64,
+    "splitShare": 50,
+    "outerGap": 16,
+    "innerGap": 16,
+    "opacity": 52,
+    "activeOpacity": 86,
+    "cornerRadius": 24,
+    "borderWidth": 2,
+    "shadowDepth": 14,
+    "zoneLabels": true,
+    "motion": "smooth",
+    "duration": 180,
+    "profile": "custom",
+    "surfaceMode": "gradient",
+    "startColor": "#9D3657FF",
+    "endColor": "#3F2558FF",
+    "activeColor": "#FFDAA5FF",
+    "textColor": "#FFFFFFFF",
+    "gradientDirection": "horizontal"
+  }
+}

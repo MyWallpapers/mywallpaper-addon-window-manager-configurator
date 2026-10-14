@@ -1,0 +1,1 @@
+{"name":"mywallpaper-addon-window-manager-configurator","version":"0.1.0","private":true,"type":"module","scripts":{"generate":"node scripts/generate-manifest.mjs","check":"node tests/manifest.test.mjs","test:windows":"node tests/windows.test.mjs"}}
