@@ -1,0 +1,54 @@
+{
+  "sourceCommit": "40069485aa0d356d721cad4cd286941e4e9fd392",
+  "ledgerSha256": "5c198b56bd404e3e035f31687e2ed23b7c0d87655e998bd0940fa2649ddae993",
+  "localIndependentBuilds": 2,
+  "centralIndependentBuilds": 2,
+  "comparison": "byte-for-byte within each pair; local and central EXEs differ with their toolchains",
+  "local": {
+    "passed": true,
+    "files": [
+      {
+        "path": "companion.exe",
+        "sha256": "347ec5e9f51b766d56d730905698445f513c831ae69bb086468803d92b7a7aa6"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "07c869e8100bedf67079f778daa5ef535b99579ba175f5764cdda1580a7d2f8f"
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "e99b806cca6d571e40f6bbf3193a9b145446b64a19a7705a3a66a9a8abd60d47"
+      },
+      {
+        "path": "notices/nlohmann-json.LICENSE.MIT",
+        "sha256": "46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603"
+      }
+    ]
+  },
+  "central": {
+    "passed": true,
+    "workflowRun": 38652074104,
+    "artifactNames": [
+      "mywallpaper-companion-1-1419933138-40069485aa0d356d721cad4cd286941e4e9fd392-38652074104-1",
+      "mywallpaper-companion-2-1419933138-40069485aa0d356d721cad4cd286941e4e9fd392-38652074104-1"
+    ],
+    "files": [
+      {
+        "path": "companion.exe",
+        "sha256": "7d18ea7ba110a4a8ddf71f0dca01df4e6e78ad18efb5c12f955be5a692521d67"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "07c869e8100bedf67079f778daa5ef535b99579ba175f5764cdda1580a7d2f8f"
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "e99b806cca6d571e40f6bbf3193a9b145446b64a19a7705a3a66a9a8abd60d47"
+      },
+      {
+        "path": "notices/nlohmann-json.LICENSE.MIT",
+        "sha256": "46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603"
+      }
+    ]
+  }
+}

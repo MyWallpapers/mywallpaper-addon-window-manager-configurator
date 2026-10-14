@@ -1,0 +1,651 @@
+{
+  "passed": true,
+  "sourceCommit": "40069485aa0d356d721cad4cd286941e4e9fd392",
+  "ledgerSha256": "5c198b56bd404e3e035f31687e2ed23b7c0d87655e998bd0940fa2649ddae993",
+  "binarySha256": "7d18ea7ba110a4a8ddf71f0dca01df4e6e78ad18efb5c12f955be5a692521d67",
+  "atUtc": "2026-10-14T23:19:30Z",
+  "environment": "development",
+  "application": "Actual running MyWallpaper; normal process-v2 controller and native Job containment",
+  "loadMode": "temporary DEV layer with byte-identical published central executable",
+  "throughMyWallpaper": true,
+  "target": "Controlled Win32 fixture; SendInput global keyboard/mouse events; no physical-user or third-party application acceptance claimed",
+  "settingsPersistenceScope": "DEV settings and controller projection; published-account A08 settings not overwritten or exercised",
+  "controls": {
+    "normalSidebarSlider": {
+      "name": "normal sidebar slider autosave reaches layer settings",
+      "before": 50,
+      "value": 61
+    },
+    "dropdown": {
+      "name": "sidebar dropdown layouts",
+      "options": [
+        "Deux fenêtres côte à côte",
+        "Quatre fenêtres",
+        "Colonnes égales",
+        "Une grande fenêtre et deux outils",
+        "Grille personnalisée"
+      ]
+    },
+    "sliderWidthPixels": 290,
+    "sliderValueRestored": true,
+    "applyButtonRequired": false
+  },
+  "checks": [
+    {
+      "name": "actual global shortcut through MyWallpaper",
+      "state": {
+        "dpi": 96,
+        "exStyle": 256,
+        "index": 0,
+        "minimized": false,
+        "rect": [
+          13,
+          20,
+          1270,
+          1407
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          20,
+          20,
+          1256,
+          1400
+        ],
+        "window": 8522936,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      }
+    },
+    {
+      "name": "configured 65 percent split through palette keyboard",
+      "state": {
+        "dpi": 96,
+        "exStyle": 256,
+        "index": 0,
+        "minimized": false,
+        "rect": [
+          1661,
+          20,
+          886,
+          1407
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          1668,
+          20,
+          872,
+          1400
+        ],
+        "window": 8522936,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      }
+    },
+    {
+      "name": "native palette Escape and mouse selection"
+    },
+    {
+      "name": "actual low-level Alt drag",
+      "before": [
+        633,
+        360,
+        1294,
+        727
+      ],
+      "after": [
+        703,
+        405,
+        1294,
+        727
+      ]
+    },
+    {
+      "name": "actual low-level Alt resize",
+      "state": {
+        "dpi": 96,
+        "exStyle": 256,
+        "index": 0,
+        "minimized": false,
+        "rect": [
+          703,
+          405,
+          1374,
+          787
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          710,
+          405,
+          1360,
+          780
+        ],
+        "window": 8522936,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      }
+    },
+    {
+      "name": "40 palette and placement cycles"
+    },
+    {
+      "name": "12 settings-driven disable/re-enable cycles restore owned topmost"
+    },
+    {
+      "name": "layer removal restores fullscreen, topmost and tray; both native processes terminate; app and Explorer retained"
+    }
+  ],
+  "inputPreconditions": {
+    "click": {
+      "overlay": 10031312,
+      "underCursor": 10031312,
+      "class": "MWWindowPlacementOverlay",
+      "point": [
+        100,
+        100
+      ],
+      "style": 2483027968,
+      "exStyle": 134742152,
+      "rect": [
+        0,
+        0,
+        2560,
+        1440
+      ]
+    },
+    "drag": {
+      "point": [
+        1280,
+        723
+      ],
+      "windowUnderCursor": 8522936,
+      "class": "MWWindowManagerFixture",
+      "foreground": 8522936,
+      "fixtureWindow": 8522936,
+      "altDownBeforeClick": true,
+      "stateAfterGesture": {
+        "dpi": 96,
+        "exStyle": 256,
+        "index": 0,
+        "minimized": false,
+        "rect": [
+          703,
+          405,
+          1294,
+          727
+        ],
+        "style": 349110272,
+        "topmost": false,
+        "visible": true,
+        "visibleRect": [
+          710,
+          405,
+          1280,
+          720
+        ],
+        "window": 8522936,
+        "work": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      }
+    }
+  },
+  "measurements": {
+    "sampleCount": 19,
+    "observationSeconds": 63.844,
+    "cooldownSampleCount": 10,
+    "nativeProcesses": 2,
+    "privateMiB": {
+      "baseline": 4.727,
+      "cooldown": 4.852,
+      "delta": 0.125,
+      "peak": 5.066
+    },
+    "workingSetMiB": {
+      "baseline": 44.82,
+      "cooldown": 45.039,
+      "delta": 0.219,
+      "peak": 45.133
+    },
+    "resources": {
+      "baseline": {
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18
+      },
+      "cooldown": {
+        "handles": 330,
+        "threads": 6,
+        "gdi": 3,
+        "user": 18
+      }
+    },
+    "samples": [
+      {
+        "phase": "baseline",
+        "elapsedSeconds": 0,
+        "privateBytes": 4956160,
+        "workingSetBytes": 46997504,
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 0.421875
+      },
+      {
+        "phase": "stress",
+        "elapsedSeconds": 0.453,
+        "privateBytes": 4956160,
+        "workingSetBytes": 47013888,
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 0.53125
+      },
+      {
+        "phase": "stress",
+        "elapsedSeconds": 2.406,
+        "privateBytes": 4956160,
+        "workingSetBytes": 47091712,
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 1.125
+      },
+      {
+        "phase": "stress",
+        "elapsedSeconds": 4.406,
+        "privateBytes": 4960256,
+        "workingSetBytes": 47128576,
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 1.640625
+      },
+      {
+        "phase": "stress",
+        "elapsedSeconds": 6.406,
+        "privateBytes": 5259264,
+        "workingSetBytes": 47325184,
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 2.171875
+      },
+      {
+        "phase": "stress",
+        "elapsedSeconds": 8.375,
+        "privateBytes": 5312512,
+        "workingSetBytes": 32567296,
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 2.65625
+      },
+      {
+        "phase": "stress",
+        "elapsedSeconds": 10.235,
+        "privateBytes": 5312512,
+        "workingSetBytes": 47312896,
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 3.203125
+      },
+      {
+        "phase": "stress",
+        "elapsedSeconds": 12.266,
+        "privateBytes": 5136384,
+        "workingSetBytes": 47247360,
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 3.765625
+      },
+      {
+        "phase": "stress",
+        "elapsedSeconds": 14.172,
+        "privateBytes": 5136384,
+        "workingSetBytes": 47267840,
+        "handles": 331,
+        "threads": 13,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.328125
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 36.422,
+        "privateBytes": 5144576,
+        "workingSetBytes": 47239168,
+        "handles": 330,
+        "threads": 8,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.765625
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 39.469,
+        "privateBytes": 5144576,
+        "workingSetBytes": 47239168,
+        "handles": 330,
+        "threads": 8,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.765625
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 42.563,
+        "privateBytes": 5144576,
+        "workingSetBytes": 47239168,
+        "handles": 330,
+        "threads": 8,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.765625
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 45.61,
+        "privateBytes": 5144576,
+        "workingSetBytes": 47239168,
+        "handles": 330,
+        "threads": 8,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.78125
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 48.641,
+        "privateBytes": 5144576,
+        "workingSetBytes": 47239168,
+        "handles": 330,
+        "threads": 8,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.78125
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 51.688,
+        "privateBytes": 5144576,
+        "workingSetBytes": 47239168,
+        "handles": 330,
+        "threads": 8,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.78125
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 54.735,
+        "privateBytes": 5115904,
+        "workingSetBytes": 47222784,
+        "handles": 330,
+        "threads": 7,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.78125
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 57.766,
+        "privateBytes": 5115904,
+        "workingSetBytes": 47222784,
+        "handles": 332,
+        "threads": 7,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.78125
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 60.813,
+        "privateBytes": 5087232,
+        "workingSetBytes": 47226880,
+        "handles": 330,
+        "threads": 6,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.78125
+      },
+      {
+        "phase": "cooldown",
+        "elapsedSeconds": 63.844,
+        "privateBytes": 5087232,
+        "workingSetBytes": 47226880,
+        "handles": 330,
+        "threads": 6,
+        "gdi": 3,
+        "user": 18,
+        "cpuSeconds": 4.78125
+      }
+    ]
+  },
+  "afterStop": {
+    "ownedTemporaryStatesRestored": true,
+    "bothNativeProcessesTerminated": true,
+    "mywallpaperRestarted": false,
+    "explorerRestarted": false,
+    "preservedPersistentLayers": 3,
+    "remainingA08DevelopmentLayers": 0,
+    "developerServerStopped": true,
+    "qaObserverRestored": true
+  },
+  "standaloneCentralRun": {
+    "passed": true,
+    "binarySha256": "7d18ea7ba110a4a8ddf71f0dca01df4e6e78ad18efb5c12f955be5a692521d67",
+    "checks": [
+      {
+        "name": "actual global shortcut in standalone companion",
+        "state": {
+          "dpi": 96,
+          "exStyle": 256,
+          "index": 0,
+          "minimized": false,
+          "rect": [
+            13,
+            20,
+            1270,
+            1407
+          ],
+          "style": 349110272,
+          "topmost": false,
+          "visible": true,
+          "visibleRect": [
+            20,
+            20,
+            1256,
+            1400
+          ],
+          "window": 3279730,
+          "work": [
+            0,
+            0,
+            2560,
+            1440
+          ]
+        }
+      },
+      {
+        "name": "configured 65 percent split through palette keyboard",
+        "state": {
+          "dpi": 96,
+          "exStyle": 256,
+          "index": 0,
+          "minimized": false,
+          "rect": [
+            1661,
+            20,
+            886,
+            1407
+          ],
+          "style": 349110272,
+          "topmost": false,
+          "visible": true,
+          "visibleRect": [
+            1668,
+            20,
+            872,
+            1400
+          ],
+          "window": 3279730,
+          "work": [
+            0,
+            0,
+            2560,
+            1440
+          ]
+        }
+      },
+      {
+        "name": "native palette Escape and mouse selection"
+      },
+      {
+        "name": "actual low-level Alt drag",
+        "before": [
+          633,
+          360,
+          1294,
+          727
+        ],
+        "after": [
+          703,
+          405,
+          1294,
+          727
+        ]
+      },
+      {
+        "name": "actual low-level Alt resize",
+        "state": {
+          "dpi": 96,
+          "exStyle": 256,
+          "index": 0,
+          "minimized": false,
+          "rect": [
+            703,
+            405,
+            1374,
+            787
+          ],
+          "style": 349110272,
+          "topmost": false,
+          "visible": true,
+          "visibleRect": [
+            710,
+            405,
+            1360,
+            780
+          ],
+          "window": 3279730,
+          "work": [
+            0,
+            0,
+            2560,
+            1440
+          ]
+        }
+      },
+      {
+        "name": "40 palette and placement cycles"
+      },
+      {
+        "name": "12 settings-driven disable/re-enable cycles restore owned topmost"
+      },
+      {
+        "name": "normal process-v2 shutdown restores fullscreen, topmost and tray; both native processes terminate; app and Explorer retained"
+      }
+    ]
+  },
+  "initialInputAttempts": [
+    {
+      "attempt": 1,
+      "passed": false,
+      "error": "Alt drag did not move window",
+      "completedChecks": [
+        "actual global shortcut through MyWallpaper",
+        "configured 65 percent split through palette keyboard",
+        "native palette Escape and mouse selection"
+      ],
+      "clickProbe": {
+        "overlay": 11144586,
+        "underCursor": 31130414,
+        "class": "Chrome_RenderWidgetHostHWND",
+        "point": [
+          0,
+          142
+        ],
+        "style": 2483027968,
+        "exStyle": 134742152,
+        "rect": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      },
+      "binarySha256": "7d18ea7ba110a4a8ddf71f0dca01df4e6e78ad18efb5c12f955be5a692521d67"
+    },
+    {
+      "attempt": 2,
+      "passed": false,
+      "error": "Alt drag did not move window",
+      "completedChecks": [
+        "actual global shortcut through MyWallpaper",
+        "configured 65 percent split through palette keyboard",
+        "native palette Escape and mouse selection"
+      ],
+      "clickProbe": {
+        "overlay": 17697298,
+        "underCursor": 17697298,
+        "class": "MWWindowPlacementOverlay",
+        "point": [
+          100,
+          100
+        ],
+        "style": 2483027968,
+        "exStyle": 134742152,
+        "rect": [
+          0,
+          0,
+          2560,
+          1440
+        ]
+      },
+      "binarySha256": "7d18ea7ba110a4a8ddf71f0dca01df4e6e78ad18efb5c12f955be5a692521d67"
+    }
+  ],
+  "initialInputInterpretation": "First attempt had a pointer/target mismatch; second attempt lacked drag precondition instrumentation. After checking cursor target, foreground and Alt state and adding input settling waits, standalone and integrated runs passed with the same addon bytes. No addon or engine change resulted from these two attempts. This does not prove the cause of the second attempt."
+}

@@ -53,6 +53,8 @@ La zone de travail provient de `MONITORINFO.rcWork`. L’entrée [work-area v1](
 
 Voir [docs/qualification.md](docs/qualification.md) pour les preuves réellement observées et les essais restants.
 
+**0.1.0 est publiée dans l’environnement de développement MyWallpaper**, accessible dans le catalogue étendu aux nouvelles releases non examinées. Le [rapport de publication](docs/release-qualification-0.1.0.md) lie les sources, les reconstructions centrales, les fichiers publiés et les essais d’intégration. Les mesures et limites sont précisées ; aucune qualification générale de toutes les applications Windows n’est annoncée.
+
 ## Construction et validation locales
 
 Windows x64, Visual Studio 2022 ou 2026 C++ Build Tools et Node.js. Le dépôt est autonome : son en-tête JSON MIT et sa notice sont présents dans `third_party/nlohmann`, vérifiés par SHA-256 avant compilation. Aucun checkout du moteur n’est requis.

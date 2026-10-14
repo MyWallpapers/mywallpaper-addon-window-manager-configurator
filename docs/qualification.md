@@ -1,5 +1,7 @@
 # Qualification de l’implémentation locale
 
+La [qualification de publication 0.1.0](release-qualification-0.1.0.md) complète ce socle : binaire central exact, exécution dans MyWallpaper via un calque DEV, arrêt, mesures mémoire et disponibilité dans le catalogue de développement. Elle distingue les gestes simulés sur fixture des usages physiques et applications tierces encore non qualifiés.
+
 Les résultats observés sont dans [evidence/windows-validation.json](../evidence/windows-validation.json), liés au SHA-256 du binaire et du ledger courant. Ce rapport décrit une fixture Win32 externe privée. Il ne certifie pas Explorer, Chromium, une application élevée ou toutes les versions de Windows.
 
 Le build MSVC x64 et CTest couvrent profils, alpha-last, plages, settings invalides, zones, marges impaires, origines négatives, limites de grille, transfert géométrique, centrage et framing mono/multi-chunk. Le validateur public MyWallpaper accepte le manifeste et les valeurs des cinq presets. Aucune action ou section n’est soustraite au compteur de 100.
@@ -18,7 +20,7 @@ L’arrêt normal, EOF, la désactivation et la mort forcée du parent sont dist
 
 Restent à qualifier sur les hosts concernés :
 
-- interaction réelle Alt/glisser, clic et clavier dans la palette, gestes configurés d’un pavé tactile ;
+- entrées physiques Alt/glisser, clic et clavier dans des applications utilisateur, gestes configurés d’un pavé tactile ; les entrées simulées sur fixture et la palette passent désormais dans MyWallpaper ;
 - Win32, Chromium, applications UWP, applications élevées, fenêtres à taille minimale particulière et applications occupées ;
 - écrans à DPI différents, écrans négatifs physiques, rotation, débranchement et retour d’affichage ;
 - passage entre plusieurs bureaux virtuels réels, applications qui replacent leur fenêtre après ouverture et plusieurs documents de même classe ;

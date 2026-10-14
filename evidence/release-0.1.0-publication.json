@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "environment": "development",
+  "addonId": "01a13ca4-67bc-7be1-9ccb-8a84601a865e",
+  "releaseId": "01a13caf-0ea1-7a82-893c-6a9ed77d0403",
+  "state": "available",
+  "sourceCommit": "40069485aa0d356d721cad4cd286941e4e9fd392",
+  "distributionDigest": "sha256:0f52f92f11af7bdb8cb6c124b9b94c6e264dac8edb6506888c03dcc6704dba2f",
+  "workflowRun": 38652074104,
+  "files": [
+    {
+      "path": "native/out/windows-x86_64/LICENSE",
+      "size": 1069,
+      "sha256": "sha256:07c869e8100bedf67079f778daa5ef535b99579ba175f5764cdda1580a7d2f8f"
+    },
+    {
+      "path": "native/out/windows-x86_64/THIRD_PARTY_NOTICES.md",
+      "size": 841,
+      "sha256": "sha256:e99b806cca6d571e40f6bbf3193a9b145446b64a19a7705a3a66a9a8abd60d47"
+    },
+    {
+      "path": "native/out/windows-x86_64/companion.exe",
+      "size": 685568,
+      "sha256": "sha256:7d18ea7ba110a4a8ddf71f0dca01df4e6e78ad18efb5c12f955be5a692521d67"
+    },
+    {
+      "path": "native/out/windows-x86_64/notices/nlohmann-json.LICENSE.MIT",
+      "size": 1076,
+      "sha256": "sha256:46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603"
+    }
+  ],
+  "atUtc": "2026-10-14T23:28:45.874Z",
+  "publicationId": "01a13cab-3e50-7123-b6b4-88fb672ac5ee",
+  "tag": "v0.1.0",
+  "detailsUrl": "https://github.com/MyWallpapers/native-addon-toolchain/actions/runs/38652074104",
+  "catalogue": {
+    "activeReleaseId": "01a13caf-0ea1-7a82-893c-6a9ed77d0403",
+    "authorPreferredReleaseId": "01a13caf-0ea1-7a82-893c-6a9ed77d0403",
+    "visibleWithIncludeUnreviewed": true,
+    "visibleInReviewedOnlyCatalogue": false,
+    "signals": {
+      "communitySignalState": "insufficient",
+      "nativeRebuildAttested": true,
+      "staffEvidenceReviewed": false
+    }
+  },
+  "scope": "Publication and availability in development; no production publication or staff review claimed"
+}
